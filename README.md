@@ -73,7 +73,22 @@ The EC2 instance in this workload worked as a server. It holds the Jenkins for a
 
 
 ## Optimization
-## Conclusion
+1. What are the benefits of using managed services for cloud infrastructure?
+	* Reduced the cost. Users only pay for what they use. As in this work, we can just  rent the T2 instance for 10G depending on our demand, instead of purchasing a physical instance. And by using ec2 and EBS, users can save the cost  of maintaining the hardware and security. 
+	* Improve the time efficiency of deploying, monitoring and testing. Faster to detect errors in the deploying process. Also saved time because of the user-friendly interface.
+	* Improve the security. Platforms have many built security policies to ensure the security.
+	* High Scalability. The resource can be auto-scaling if using managed services for cloud infrastructure.
+	* High reliability and availability. Users can leverage various services within the cloud infrastructure to achieve high reliability and availability for their applications.
 
+2. What are some issues that a retail bank would face choosing this method of deployment and how would you address/resolve them?
+	* This deployment method that uploads a zip file to deploy still requires developers to deploy the application manually. If the pipeline also includes a deploy stage, time efficiency can be improved. Automating the deployment process can help avoid mistakes, such as choosing the wrong version or files, as it will automatically select the correct version and files for the application.
+	* In this deployment, we still cannot avoid single point failure. If the instance fails, the application will be down. For example when I configure my Environment, I can not access the retail bank. Therefore, we might need to have redundant data to avoid single point failure. 
+3. What are other disadvantages of using elastic beanstalk or similar managed services for deploying applications?
+	* Users have less control. 
+	* The service highly relies on vendors. 
+	* Potential risk of using more resources than expected, which can cause higher cost. 
+## Conclusion
+	
+This workload demonstrates how to use AWS EC2, Elastic Beanstalk (EBS), GitHub, and Jenkins to simulate the entire process of automating the build, test, and deployment stages. Throughout the working and troubleshooting processes, I gained a better understanding of how each component—version control systems, CI/CD tools, and managed services in cloud infrastructure—collaborates to manage applications. The EC2 instance serves as a server to run Jenkins, where builds and tests will be triggered automatically upon any commit tracked by the version control system. The tested code can then be deployed through EBS. This pipeline reduces errors before production and improves efficiency. However, the application can be further enhanced by improving redundancy. Ultimately, this workload emphasizes the importance of documentation.
 
 
