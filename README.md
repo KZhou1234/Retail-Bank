@@ -47,8 +47,8 @@ Jenkins: successfully running
 ### Accessing web page
 1. Click on the domain, which will translate to the IP address of the EC2 instance. Normally, we can access the resource. However, I got a 502 Bad Gateway error, indicating a server issue. With the hint, I found that the file I ‘ve uploaded is not right. And it caused the server to not run the application successfully. Before that I checked the Nginx error log and found error messages saying the connection is refused. As the following pictures. 
 
-##Optimization
-##Conclusion
+## Optimization
+## Conclusion
 
 
 
